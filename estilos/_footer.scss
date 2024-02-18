@@ -1,0 +1,10 @@
+@import "_variaveis";
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: $base-07;
+  color: $base-01;
+  padding: 20px;
+  margin-top: 100px;
+}

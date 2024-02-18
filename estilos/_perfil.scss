@@ -1,0 +1,62 @@
+@import "_variaveis";
+
+button.perfil {
+  background-color: $principal-05;
+  color: $base-01;
+  padding: 8px 16px;
+  border: none;
+}
+
+div.tarefa {
+  padding: 3rem 0;
+  input {
+    font-size: 1rem;
+    background-color: $base-02;
+    border: none;
+    padding: 3px 0;
+    border-radius: 5px;
+    display: block;
+  }
+  button.tarefa {
+    background-color: #79d1ff;
+    color: $base-07;
+    padding: 8px 16px;
+    border: none;
+    margin-top: 5px;
+  }
+}
+
+.tarefa-item {
+  background-color: $secundaria-03;
+  padding: 0.5rem;
+  margin-top: 5px;
+}
+
+.tarefa-excluir {
+  background-color: #ff5a5f;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.tarefa-concluir {
+  background-color: #90ee90;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.concluida {
+  background-color: #90ee90;
+}
+
+.desconcluida {
+  background-color: $secundaria-03;
+}
+
+.tarefa-desconcluir {
+  background-color: $secundaria-03;
+  margin-left: 5px;
+  padding: 8px 16px;
+}

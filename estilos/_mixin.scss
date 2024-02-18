@@ -1,0 +1,19 @@
+@import "_variaveis";
+
+@mixin tituloGrande {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+@mixin tituloMedio {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+@mixin separador {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.32rem;
+  background-color: $principal-05;
+}

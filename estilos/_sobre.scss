@@ -1,0 +1,85 @@
+@import "_variaveis.scss";
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  gap: 20px;
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.card-frontend,
+.card-backend {
+  background-color: $base-01;
+  padding: 30px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.card-frontend {
+  &::before {
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    content: "";
+    background-color: $principal-04;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+  }
+}
+
+.card-backend {
+  &::before {
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    content: "";
+    background-color: $principal-04;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+  }
+}
+
+.card-frontend,
+.card-backend {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5px;
+    li {
+      &::before {
+        content: "";
+        display: inline-block;
+        background-color: $principal-04;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.sobre {
+  margin-top: 100px;
+}
+
+.detalhe-sobre {
+  color: $principal-04;
+}
+
+@media (max-width: 800px) {
+  .sobre {
+    margin-top: 10px;
+  }
+
+  .cards {
+    margin-top: 25px;
+    grid-template-columns: 1fr;
+  }
+}

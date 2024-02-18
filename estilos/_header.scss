@@ -1,0 +1,67 @@
+@import "_variaveis";
+@import "_mixin";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $base-01;
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+  h1 {
+    &:after {
+      @include separador;
+    }
+  }
+  button {
+    display: none;
+  }
+  ul {
+    display: flex;
+    gap: 2rem;
+  }
+  @media (max-width: 800px) {
+    button {
+      display: flex;
+      border: none;
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: $principal-05;
+        box-shadow: 0 5px 0 0 $principal-05, 0 -5px 0 0 $principal-05;
+      }
+    }
+    nav.toggleMenu span {
+      transform: rotate(90deg);
+      transition: transform 1s;
+    }
+    ul {
+      opacity: 0;
+      height: 0;
+      transition: height 3s;
+      position: absolute;
+      left: 0;
+      top: -100px;
+      overflow: hidden;
+    }
+    nav.toggleMenu ul {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      top: 6rem;
+      display: flex;
+      background-color: $principal-03;
+      padding: 1.5rem 0px;
+      width: calc(100vw);
+      height: calc(100vh - 96px);
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      gap: 5px;
+      li {
+        border-bottom: 2px solid $base-01;
+      }
+    }
+  }
+}

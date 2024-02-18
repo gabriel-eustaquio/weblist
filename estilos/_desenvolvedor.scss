@@ -1,0 +1,90 @@
+@import "_variaveis.scss";
+
+.desenvolvedor-detalhe {
+  color: $principal-04;
+}
+
+.desenvolvedor {
+  margin-top: 10px;
+}
+
+.desenvolvedor-informacoes {
+  margin-top: 20px;
+}
+
+.desenvolvedor-titulo {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: $principal-02;
+  color: $principal-07;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.desenvolvedor-informacoes-grid {
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cover img {
+  object-fit: cover;
+  object-position: top right;
+}
+
+.desenvolvedor h1 {
+  margin-top: 20px;
+  background-color: $principal-01;
+  margin-bottom: 10px;
+}
+
+.desenvolvedor h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $principal-06;
+  padding: 5px;
+}
+
+.desenvolvedor h3 {
+  font-weight: normal;
+}
+
+h3.eu {
+  display: none;
+}
+
+.desenvolvedor-detalhe.num {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .desenvolvedor-informacoes-grid {
+    grid-template-columns: 1fr;
+  }
+  img {
+    height: 200px;
+  }
+  h3.eu {
+    display: block;
+    margin-top: 25px;
+  }
+}
+
+.disponibilidade {
+  width: 13px;
+  background-color: red;
+  display: inline-block;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.disponibilidade.aberto {
+  background-color: #00ff00;
+}

@@ -1,0 +1,212 @@
+@import "_variaveis";
+
+main {
+  h2.titulo {
+    font-size: 3rem;
+    text-align: center;
+  }
+  p.subtitulo {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  section {
+    padding: 10rem 0;
+  }
+}
+
+div.apresentacao {
+  background-color: $principal-04;
+  padding: 10rem 0;
+  box-shadow: 0px 120px $principal-04;
+  h2 {
+    text-align: center;
+    color: $base-01;
+    font-size: 2rem;
+  }
+  p {
+    text-align: center;
+    color: $base-02;
+    font-size: 1.5rem;
+  }
+}
+
+div.conteudo.container {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: $base-01;
+  gap: 10px;
+  div {
+    border-radius: 1rem;
+    padding: 4rem 0;
+  }
+  .btn-cadastro {
+    padding: 8px 16px;
+    background-color: $principal-04;
+    color: $base-01;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  p {
+    padding: 10px 5px;
+  }
+}
+
+.anima {
+  opacity: 0;
+}
+
+.anima.left {
+  opacity: 1;
+  animation: animaLeft 1s forwards;
+}
+
+.anima.right {
+  opacity: 1;
+  animation: animaRight 1s forwards;
+}
+
+.conteudo .anima {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+@keyframes animaLeft {
+  from {
+    transform: translate3d(-100px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes animaRight {
+  from {
+    transform: translate3d(100px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    h2.titulo {
+      font-size: 2rem;
+    }
+    p.subtitulo {
+      font-size: 1rem;
+    }
+    section {
+      padding: 5rem 0;
+    }
+  }
+  div.apresentacao {
+    padding: 5rem 0;
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  div.conteudo.container {
+    margin: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.anima div {
+  text-align: center;
+  button {
+    background-color: $principal-04;
+    border: none;
+    padding: 8px 16px;
+    color: $base-01;
+  }
+}
+
+.modal-container {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 100000;
+  display: none;
+}
+
+.modal-container.visivel {
+  display: grid;
+  align-items: center;
+  div {
+    background-color: $base-01;
+    padding: 25px;
+    animation: animarModal 1s forwards;
+  }
+  span {
+    color: $principal-04;
+  }
+  a {
+    background-color: $principal-04;
+    margin-bottom: 5px;
+  }
+  button {
+    background-color: #ff5a5f;
+    padding: 8px 16px;
+    border: none;
+    color: $base-01;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes animarModal {
+  from {
+    transform: translate3d(0px, -300px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.topo {
+  width: 50px;
+  height: 50px;
+  background-color: $principal-04;
+  opacity: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100000;
+  border-radius: 5px;
+}
+
+.topo.visivelTopo {
+  transform: opacity 1s;
+  opacity: 1;
+  animation: animarEntrada 1s forwards;
+}
+
+#irTopo {
+  padding-right: 20px;
+  padding-left: 5px;
+}
+
+@keyframes animarEntrada {
+  from {
+    transform: translate3d(30px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes animarSaida {
+  from {
+    transform: translate3d(-30px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}

@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import "_header";
+@import "_inicio";
+@import "_footer";
+@import "_desenvolvedor";
+@import "_login";
+@import "_perfil";
+@import "_sobre";
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $base-01;
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1.5rem;
+    color: black;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: $base-02;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $principal-03;
+  border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+  .toggleMenu li {
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    gap: 0px;
+    a {
+      flex: 1;
+    }
+  }
+
+  .toggleMenu .meuPerfil a {
+    padding-left: 5px;
+  }
+
+  .toggleMenu .meuPerfil {
+    padding-left: 20px;
+  }
+}
+
+li.meuPerfil {
+  display: flex;
+  align-items: center;
+}
